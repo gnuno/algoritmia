@@ -49,6 +49,8 @@ const sortArray = (array) => {
 const main = () => {
     check(sortArray([5, 3, 2, 8, 1, 4]), [1, 3, 2, 8, 5, 4]);
     check(sortArray([]), []);
+    check(sortArray([3, 1, 0, 1, 4]), [1, 1, 0, 3, 4]);
+    check(sortArray([1, 2, -1, -8, -3]), [-3, 2, -1, -8, 1]);
     check(sortArray([7, 5, 2, 6, 1, 3]), [1, 3, 2, 6, 5, 7]);
     check(sortArray([13, 33, 21, 81, 12, 45, 11]), [11, 13, 21, 33, 12, 45, 81]);
     check(sortArray([12, 22, 4, 6, 12, 46, 16]), [12, 22, 4, 6, 12, 46, 16]);

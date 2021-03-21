@@ -56,14 +56,12 @@ find_3rd_max(nums)
 # Worst Random Case
 nums <- sample(-231:231, 104, replace=F)
 nums
-
-startTime <- Sys.time()
-find_3rd_max(nums)
-Sys.time() - startTime # Time difference of 0.02818298 secs
+system.time(find_3rd_max(nums)) # 0.01sec
 
 # Super Worst Random Case
 nums <- sample(-99999999:99999999, 999999, replace=F)
+system.time(find_3rd_max(nums)) # 0.37sec
 
-startTime <- Sys.time()
-find_3rd_max(nums)
-Sys.time() - startTime # Time difference of 0.3820319 secs
+# Super Worst Random Case
+nums <- sample(-99999999:99999999, 119999999, replace=T) # 500MB
+system.time(find_3rd_max(nums)) # 42.66sec

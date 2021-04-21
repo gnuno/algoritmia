@@ -11,7 +11,7 @@ Input: `A = [1,1,1,0,0,0,1,1,1,1,0]`, `K = 2`
 Output: `6`
 #### Explicacion: 
 
-[1,1,1,0,0,***1**,1,1,1,1,**1***]
+[1,1,1,0,0,_**1**,1,1,1,1,**1**_]
 Los números en negrita están cambiados de 0 to 1. El sub-array mas largo está en itálica.
 
 ### Ejemplo 2:
@@ -21,7 +21,7 @@ Input: `A = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1]`, `K = 3`
 Output: `10`
 #### Explicación: 
 
-[0,0,***1**,1,1,1,1,1,1,1,1,**1***,0,0,0,1,1,1,1]
+[0,0,_**1**,1,1,1,1,1,1,1,1,**1**_,0,0,0,1,1,1,1]
 Los números en negrita están cambiados de 0 to 1. El sub-array mas largo está en itálica.
  
 

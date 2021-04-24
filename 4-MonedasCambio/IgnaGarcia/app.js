@@ -8,18 +8,20 @@ let cambioMin = (m) => {
 
     if (esMod10(m)) {
         k += Math.trunc(m/10)
-        for(let i=0; i<Math.trunc(m/10); i++) arr.push(10)
+        arr.push(`10*${Math.trunc(m/10)}`)
         m = m%10
     }
         
     if (esMod5(m)) {
         k += Math.trunc(m/5)
-        for(let i=0; i<Math.trunc(m/5); i++) arr.push(5)
+        arr.push(`5*${Math.trunc(m/5)}`)
         m = m%5
     }
     
-    k += m
-    for(let i=0; i<m; i++) arr.push(1)
+    if(m > 0) {
+        k += m
+        arr.push(m)
+    }
 
     return [k, arr]
 }

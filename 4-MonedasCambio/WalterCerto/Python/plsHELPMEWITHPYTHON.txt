@@ -1,0 +1,1 @@
+Si alguien quiere mirar y mejorar el codigo de python, no hablo de la logica sino de la forma de codear, es bienvenido

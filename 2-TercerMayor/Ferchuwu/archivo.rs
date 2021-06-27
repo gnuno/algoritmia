@@ -4,16 +4,16 @@ fn main() {
     let ejemplo_2 = vec![1,2];
     let ejemplo_3 = vec![2,2,3,1];
 
-    assert_eq!(el_tercero_mas_grande(muchos_numeros), Err(1i32));
+    assert_eq!(el_tercero_mas_grande(muchos_numeros), Err(1i8));
     assert_eq!(el_tercero_mas_grande(ejemplo_1), Ok(1));
     assert_eq!(el_tercero_mas_grande(ejemplo_2), Ok(2));
     assert_eq!(el_tercero_mas_grande(ejemplo_3), Ok(1));
 }
 
-fn el_tercero_mas_grande(mut nums:Vec<i32>) -> Result<i32, i32>{
+fn el_tercero_mas_grande(mut nums:Vec<i16>) -> Result<i16, i8>{
 
     if nums.len() > 104 || nums.len() <= 1{
-        return Err(1i32);
+        return Err(1i8);
     }
     
     nums.sort_unstable();
@@ -21,7 +21,7 @@ fn el_tercero_mas_grande(mut nums:Vec<i32>) -> Result<i32, i32>{
 
     if nums.iter().any(|e| *e > 231 || *e < -231){
         eprintln!("Uno de los valores no esta en el rango estipulado.");
-        return Err(1i32);
+        return Err(1i8);
     }
 
     nums.sort_by(|a, b| b.cmp(a));
